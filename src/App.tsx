@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
 import Header from "./components/Header";
 import NotesList from "./components/NotesList";
+import CreateNote from "./components/CreateNote";
 import { Note } from "./types";
 
-const initialState = {
-  title: "Evening",
-  text: "Cook dinner",
-  id: new Date().toString(),
-  color: "#ffffffff",
-  date: new Date().toString(),
-};
-
 function App() {
-  const [notes, setNotes] = useState<Note[]>([initialState]);
+  const [notes, setNotes] = useState<Note[]>([]);
 
   return (
     <>
       <Header />
       <Container className="mt-5">
-        <NotesList notes={notes} setNotes={setNotes} />
+        <Row>
+          <Col>
+            <NotesList notes={notes} setNotes={setNotes} />
+          </Col>
+          <Col>
+            <CreateNote notes={notes} setNotes={setNotes} />
+          </Col>
+        </Row>
       </Container>
     </>
   );
