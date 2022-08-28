@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Header from "./components/Header";
+import { Note } from "./types";
+
+const initialState = {
+  title: "",
+  text: "",
+  id: "",
+  color: "#ffffffff",
+  date: "",
+};
 
 function App() {
-  return <h1> Test</h1>;
+  const [notes, setNotes] = useState<Note[]>([initialState]);
+
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
