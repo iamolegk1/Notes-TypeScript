@@ -1,7 +1,8 @@
 import * as React from "react";
 
-import { Note } from "../../types";
 import Notes from "../Notes";
+import { Note } from "../../types";
+import { Container } from "react-bootstrap";
 interface INotesListProps {
   notes: Note[];
   setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
@@ -16,14 +17,14 @@ const NotesList: React.FunctionComponent<INotesListProps> = ({
   };
 
   return (
-    <>
-      <h2 className="mt-3 mb-4">Notes</h2>
+    <Container>
+      <h2 className="mt-3 mb-4">Notes List</h2>
       <div>
         {notes.map((note) => (
           <Notes key={note.id} note={note} handleDelete={handleDelete} />
         ))}
       </div>
-    </>
+    </Container>
   );
 };
 
