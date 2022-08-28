@@ -1,15 +1,11 @@
-# Getting Started with Create React App
+# Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Notes project using the following technologies:
 
-## Available Scripts
+TypeScript, React for the frontend
 
-In the project directory, you can run:
+React-Bootstrap for styles 
 
-### `npm start`
+https://user-images.githubusercontent.com/86320945/187080380-2a9ad1df-5d4c-42d4-a23c-23315a59abb2.mp4
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
